@@ -30,7 +30,31 @@ for(let i=0; i<10;i++){
 }
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
+/* function fibonacci(n) {
+	let previous = 0;
+	let next = 1;
+	for (let i = 0; i < n; i++ ){
+		let temp = previous + next;
+		previous = next;
+		next = temp;
+	}
+	return previous;
+} */
 
+function fibonacci(n) {
+	if (n <= 1) {
+		return n
+	} else {
+		// calls last two numbers 
+		// fibonacci(3) would return fibonacci(2) + fibonacci(1)
+		// fibonacci(2) would return fibonacci(1) + fibonacci(0)
+		// fibonacci(1) = 1 (returns n)
+		// fibonacci(0) = 0 (returns n)
+		//				  f(0) + f(1) + f(2)	
+		// fibonacci(3) = 0    + 1    + (1 + 0) = 2
+		return fibonacci(n - 1) + fibonacci(n - 2);
+	}
+}
 
 
 
