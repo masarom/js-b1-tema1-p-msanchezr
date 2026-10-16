@@ -18,7 +18,31 @@ oddNumbers(7, myArray);
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
 
+/* function oddNumbers(n, array) {
+	for (let i = n; i > 0; i--){
+		if (i % 2 !== 0) {
+			array.push(i);
+		}
+	}
+	return array;
+} */
 
+function oddNumbers(n, array) {
+	if (n <= 0) {
+		return array;
+	} else if (n % 2 !== 0) {
+		array.push(n);
+	}
+	//     oddNumbers(7, [])
+	//     oddNumbers(6, [7])
+	//     oddNumbers(5, [7, 5])
+	//     oddNumbers(4, [7, 5])
+	//     oddNumbers(3, [7, 5, 3])
+	//     oddNumbers(2, [7, 5, 3])
+	//     oddNumbers(1, [7, 5, 3, 1])
+	//     oddNumbers(0, [7, 5, 3, 1])
+	return oddNumbers(n - 1, array);
+}
 
 
 /**
