@@ -23,7 +23,15 @@
 console.log(hypotenuse(3,4));
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
-
+function hypotenuse(base, height) {
+  function square(n){
+    return n*n;
+  }
+  const squaredBase = square(base);
+  const squaredHeight = square(height);
+  const result = Math.sqrt(squaredBase + squaredHeight);
+  return result;
+}
 
 
 

@@ -61,7 +61,18 @@ console.log(totalApproved(classroomStudents));
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
 
+function totalApproved(arr) {
+  let countApproved = 0;
 
+  arr.map(function isApproved(student) {
+    if (student.averageGrade >= 5) {
+      return countApproved++;
+    }
+    return countApproved;
+  });
+
+  return countApproved;
+}
 
 
 /**
