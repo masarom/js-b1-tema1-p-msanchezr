@@ -55,7 +55,29 @@ console.log(oldest(classroomStudents[2], classroomStudents[3], classroomStudents
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
 
+function oldest (...students) {
+/*   const studentsArray = students.map((student) => [student.name, student.yearOfBirth]);
+  let oldestName = "";
+  let oldestYear = Infinity;
 
+  for (let i = 0; i < studentsArray.length; i++) {
+    let currentYear = studentsArray[i][1];
+    if (currentYear < oldestYear) {
+      oldestYear = currentYear;
+      oldestName = studentsArray[i][0];
+    }
+    } 
+ return oldestName; */
+
+  let oldestStudent = students[0];
+
+  for (const student of students) {
+    if(student.yearOfBirth < oldestStudent.yearOfBirth) {
+      oldestStudent = student;
+    }
+  }
+  return oldestStudent.name;
+}
 
 
 /**
